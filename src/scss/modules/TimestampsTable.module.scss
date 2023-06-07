@@ -1,0 +1,41 @@
+@import '../vars';
+
+$switch-breakpoint-min: 768px;
+$switch-breakpoint-max: $switch-breakpoint-min - 1px;
+
+.icon-column {
+  width: 3rem;
+}
+
+.syntax-column {
+  @media (min-width: $switch-breakpoint-min) {
+    width: 16rem;
+  }
+
+  .example-text {
+    margin-top: 0.5rem;
+    @media (min-width: $switch-breakpoint-min) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $switch-breakpoint-max) {
+  .example-column,
+  .icon-column {
+    display: none;
+  }
+
+  .table {
+    text-align: center;
+  }
+
+  .copy-syntax {
+    justify-content: center !important;
+  }
+}
+
+// For parity, remove after Mantine redesign
+.table tbody tr:last-child > * {
+  border-bottom-width: 0 !important;
+}

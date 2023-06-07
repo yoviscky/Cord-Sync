@@ -1,0 +1,39 @@
+@import '../vars';
+@import '../functions';
+
+$footer-separator-size: rem(1px);
+
+.footer {
+  bottom: 0;
+  padding: 0.75rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0;
+  flex-flow: row wrap;
+
+  .footer-item {
+    font-size: 1rem;
+    display: block;
+  }
+
+  .footer-separator {
+    display: inline-block;
+    width: $footer-separator-size;
+    height: 1.5rem;
+    border-right: $footer-separator-size solid rgba(gray, 0.5);
+    margin: 0 0.5rem;
+  }
+
+  @media (max-width: 767px) {
+    flex-flow: column nowrap;
+
+    .footer-item:not(:last-child) {
+      margin-bottom: rem(5px);
+    }
+
+    .footer-separator {
+      display: none;
+    }
+  }
+}
