@@ -7,4 +7,6 @@ const { redirects } = require('./vercel.json');
 module.exports = {
   i18n,
   redirects: async () => redirects,
+  basePath: 'https://github.com/yoviscky/Cord-Sync/',
+  assetPrefix: 'https://github.com/yoviscky/Cord-Sync/',
 };
